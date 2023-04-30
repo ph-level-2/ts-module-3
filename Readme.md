@@ -14,3 +14,11 @@ primitive type
 
 let a = undefined // type is any
 const a= undefined // type is undefined
+
+class 3
+array
+let arr:number[]=[]
+let arr:[number,string]=[234,'sdf' ]
+
+class 4
+object
