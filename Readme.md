@@ -176,6 +176,9 @@ const { name2: string } = ObjDestructure;
 
 **type alias**
 
+- type alias
+- function type alias
+
 ```javascript
 // type alias
 type MyType = {
@@ -199,4 +202,102 @@ const functionAddAlias = (
 };
 
 functionAddAlias(23, 53, (x, y) => x + y);
+```
+
+## class 8
+
+**Union Intersection**
+
+- add two type using type union
+- add intersection for use common type
+
+```javascript
+// union
+type first = {
+	name: string,
+};
+type second = {
+	name: string,
+	exp: string,
+	yr: number,
+};
+
+const newDev: first | second = {
+	name: 'sdf',
+	exp: 'sdf',
+	yr: 324,
+};
+```
+
+```javascript
+// intersection
+type first2 = {
+	name: string,
+};
+type second2 = first2 & {
+	exp: string,
+	yr: number,
+};
+
+const newDev2: second2 = {
+	name: 'dev2',
+	exp: '2 x ',
+	yr: 324,
+};
+```
+
+## class 9
+
+- null
+
+```javascript
+// null
+const searchName = (value: string | null) => {
+	if (value === null) {
+		console.log('get result');
+	} else {
+		console.log('not get');
+	}
+};
+searchName(null);
+```
+
+```javascript
+// unknown type
+const getMySpeed = (value: unknown) => {
+	if (typeof value === 'number') {
+		return (value * 1000) / 3600;
+	}
+	if (typeof value === 'string') {
+		const [spd, unit] = value.split(' ');
+		return (parseInt(spd) * 1000) / 3600;
+	}
+};
+
+getMySpeed(234);
+getMySpeed('sdf kh-1');
+```
+
+```javascript
+// never
+// if did not any return we can use never
+function throwError(message: string): never {
+	throw new Error(message);
+}
+throwError('this is error');
+```
+
+## class 10
+
+```javascript
+// ternary operator
+let age = 24;
+const adult = age >= 18 ? 'Yes' : 'no';
+
+// Nullish operator
+// only work for null and undefined
+
+const isAuth = '';
+const userName = isAuth ?? 'gest';
+const userName2 = isAuth ? isAuth : 'gest';
 ```
