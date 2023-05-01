@@ -9,36 +9,17 @@
 **primitive type:**
 
 - number
-
-```javascript
-let num: number = 234;
-```
-
-- boolean
-
-```javascript
-let bool: boolean = true;
-```
-
 - string
-
-```javascript
-let str: string = 'string';
-```
-
+- boolean
 - null
-
-```javascript
-let nu: null = null;
-```
-
 - undefined
 
 ```javascript
+let num: number = 234;
+let bool: boolean = true;
+let str: string = 'string';
+let nu: null = null;
 let un: undefined = undefined;
-```
-
-```javascript
 let a = undefined; // type is any
 const a = undefined; // type is undefined
 ```
@@ -46,6 +27,9 @@ const a = undefined; // type is undefined
 ## class 3
 
 **array**
+
+- simple array
+- tuple array
 
 ```javascript
 let arr: number[] = [];
