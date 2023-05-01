@@ -18,7 +18,8 @@ tsc script.ts
 - i'm fetch .ps1 security error solution in nodemon or search in youtube
 
 **folder structure**
-init type script =>
+
+- init type script =>
 
 ```bash
 tsc --init
@@ -33,7 +34,7 @@ tsc --init
 tsc
 ```
 
-- or watch mode =>
+or watch mode =>
 
 ```bash
 tsc -w
