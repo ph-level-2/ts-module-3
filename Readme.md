@@ -44,6 +44,39 @@ let arr: [number, string] = [234, 'sdf'];
 - readonly object
 - already defined value
 
+```javascript
+let newObj: {
+	company: 'sdf',
+	name: string,
+} = {
+	company: 'sdf',
+	name: 'sdf',
+};
+```
+
+```javascript
+let newObj: {
+	readonly nwe: 'sasdfsfdf';
+	company: 'sdf';
+
+} = {
+	nwe: 'sasdfsfdf',
+	company: 'sdf',
+
+};
+
+```
+
+```javascript
+let newObj: {
+	company: 'sdf',
+	name: string,
+} = {
+	company: 'sdf',
+	name: 'new value',
+};
+```
+
 ## class 5
 
 **Function**
