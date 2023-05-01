@@ -149,3 +149,54 @@ const restParameter = (...friends: string[]) => {
 };
 restParameter('234', '2wer4', '2sd');
 ```
+
+```javascript
+// array destructure
+let arrayDestructure = [234, 23, 5443, 263];
+const [dis] = arrayDestructure;
+```
+
+```javascript
+// object destructure
+let ObjDestructure: {
+	name2: string,
+	age: number,
+} = {
+	name2: 'my name',
+	age: 30,
+};
+
+const { name2 } = ObjDestructure;
+
+// you can not add type like this at obj destructure
+const { name2: string } = ObjDestructure;
+```
+
+## class 7
+
+**type alias**
+
+```javascript
+// type alias
+type MyType = {
+	name: string,
+	age?: number,
+	home: string,
+};
+```
+
+- function add alias
+
+```javascript
+//  function add alias
+type operationType = (x: number, y: number) => number;
+const functionAddAlias = (
+	num1: number,
+	num2: number,
+	operation: operationType
+) => {
+	return operation(num1, num2);
+};
+
+functionAddAlias(23, 53, (x, y) => x + y);
+```
