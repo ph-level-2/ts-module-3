@@ -4,6 +4,18 @@
 - install node version control nvm
 - using >ts node dev for run ts file node environment
 
+```bash
+npm i ts-node-dev --save-dev
+```
+
+```javascript
+"scripts": {
+"start": "ts-node-dev --respawn --transpile-only index.ts",
+"test": "echo \"Error: no test specified\" && exit 1"
+},
+
+```
+
 ## class 2
 
 **primitive type:**
