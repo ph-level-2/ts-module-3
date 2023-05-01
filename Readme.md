@@ -1,4 +1,45 @@
-## class 1
+## previous start script way 01
+
+- install typescript =>
+
+```bash
+ npm i -g typescript
+```
+
+- create {script.ts} file
+- run tsc script.ts in terminal
+
+```bash
+tsc script.ts
+```
+
+- index.html have connect script.js
+- automatic create script.js
+- i'm fetch .ps1 security error solution in nodemon or search in youtube
+
+**folder structure**
+init type script =>
+
+```bash
+tsc --init
+```
+
+- tsconfig.json file have outDir and rootDir for folder
+- rootDir have .ts
+- outDir have .js and connect html
+- now =>
+
+```bash
+tsc
+```
+
+- or watch mode =>
+
+```bash
+tsc -w
+```
+
+## class 1 & start script way 02
 
 **install Type Script**
 
