@@ -1,14 +1,23 @@
 ## class 1
 
+**install Type Script**
+
 - install global ts
 - install node version control nvm
 - using >ts node dev for run ts file node environment
+
+we can run 3 way ts file
+
+- first compile {tsc} then run {node file.js} file
+- using nodemon for js file and {tsc -w} flag
+- using ts-node-dev
 
 ```bash
 npm i ts-node-dev --save-dev
 ```
 
 ```javascript
+// if you have folder you have to change dir like this  {./src/index.ts}
 "scripts": {
 "start": "ts-node-dev --respawn --transpile-only index.ts",
 "test": "echo \"Error: no test specified\" && exit 1"
