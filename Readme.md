@@ -45,7 +45,7 @@ let arr: [number, string] = [234, 'sdf'];
 - already defined value
 
 ```javascript
-let newObj: {
+let simpleObj: {
 	company: 'sdf',
 	name: string,
 } = {
@@ -55,12 +55,12 @@ let newObj: {
 ```
 
 ```javascript
-let newObj: {
-	readonly nwe: 'sasdfsfdf';
+let readonlyObj: {
+	readonly nwe: 'you cant not edit';
 	company: 'sdf';
 
 } = {
-	nwe: 'sasdfsfdf',
+	nwe: 'you cant not edit ',
 	company: 'sdf',
 
 };
@@ -68,11 +68,11 @@ let newObj: {
 ```
 
 ```javascript
-let newObj: {
-	company: 'sdf',
+let alreadyDefinedObj: {
+	company: 'you can not change value',
 	name: string,
 } = {
-	company: 'sdf',
+	company: 'you can not change value',
 	name: 'new value',
 };
 ```
@@ -83,5 +83,69 @@ let newObj: {
 
 - simple function
 - arrow function
+- callback function
+  function into object
 - pass value
-- rest parameter
+
+```javascript
+function simpleFunction(a: number, b: number = 234): number {
+	return a + b;
+}
+simpleFunction(234);
+```
+
+```javascript
+function arrowFunction = (a: number, b: number): number => a + b;
+newFunc(234, 234);
+
+```
+
+```javascript
+let myArray = [23, 24, 234, 234];
+function callbackFunction = myArray.map((e: number) => e * e);
+
+```
+
+```javascript
+// function into object
+const functionIntoObject: {
+	name: string,
+	balance: number,
+	addBalance(money: number): number,
+} = {
+	name: 'Abdur Shobur',
+	balance: 3,
+	addBalance(money: number) {
+		return this.balance + money;
+	},
+};
+person.addBalance(234);
+```
+
+## class 6
+
+**Spread Rest Default Value**
+never use first value value as default value if more then one parameter
+
+```javascript
+let defaultValue = (a: number, b: number = 234): number => {
+	return a + b;
+};
+
+defaultValue(34);
+```
+
+```javascript
+// spread operator
+const newMyArray: string[] = ['234', '231', '253'];
+const newMyArray2: string[] = ['234', '653', '234'];
+newMyArray.push(...newMyArray2);
+```
+
+```javascript
+// rest parameter
+const restParameter = (...friends: string[]) => {
+	return friends.forEach((e: string) => console.log(e));
+};
+restParameter('234', '2wer4', '2sd');
+```
