@@ -2,10 +2,10 @@ let newObj: {
 	readonly nwe: 'sasdfsfdf';
 	company: 'sdf';
 	name: string;
-	age: number;
+	age?: number;
 } = {
 	nwe: 'sasdfsfdf',
 	company: 'sdf',
 	name: 'sdf',
-	age: 234,
+	// age: 234,
 };
