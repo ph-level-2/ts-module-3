@@ -102,3 +102,89 @@ interface IArrayNum {
 }
 const RollNumber: IArrayNum = ['name 1', 'name 2'];
 ```
+
+## Class 3
+
+**Generic Type**
+
+- Use Angle <> For Write Type
+
+```javascript
+const NewArrayData: Array<string> = ['sdf', 'dsf'];
+const NewArrayData2: Array<number> = [1, 5, 8];
+let NewVal: Array<{ name: string, age: number }> = [
+	{
+		age: 23,
+		name: '2345',
+	},
+];
+```
+
+- Pass Type when we need ass like function parameter
+
+```javascript
+// pass type by generic value
+type GenericType<T> = Array<T>;
+
+let numX: GenericType<number> = [34, 234];
+let nameX: GenericType<string> = ['Str', 'New Str'];
+```
+
+- Generic Tuple
+
+```javascript
+// Generic Tuple
+type GenericTuple<X, Y> = [X, Y];
+const GenTupleValue: GenericTuple<number, string> = [23, '234'];
+```
+
+- Write Generic Object
+
+```javascript
+// write generic  object
+type GenObj<T, Y> = [T, Y];
+const NewGenObj: GenObj<object, string> = [
+	{
+		name: 'xyz',
+		age: 23,
+	},
+	'asd',
+];
+```
+
+- Generic Object Best Practice
+
+```javascript
+// but we can change object property,so it is not good practice
+
+// Best practice is specify the property
+type GenObj2<T, Y> = [T, Y];
+const NewGenObj2: GenObj<{ name: string, age: number }, string> = [
+	{
+		name: 'xyz',
+		age: 23,
+	},
+	'asd',
+];
+```
+
+## Class 4
+
+**Generic Interface**
+
+- Simple generic Interface
+
+```javascript
+// generic interface
+interface NewGenInterface {
+	name: string;
+	age: number;
+}
+
+type GenInterFace<T> = T;
+
+const NewValueGenInterface: GenInterFace<NewGenInterface> = {
+	age: 234,
+	name: 'New Name',
+};
+```
