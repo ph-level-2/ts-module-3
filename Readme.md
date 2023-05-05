@@ -224,3 +224,108 @@ const NewValeX: GenType<string, string> = {
 	age: 'sdf',
 };
 ```
+
+## Class 5
+
+**GENERIC FUNCTION**
+
+- Return Array Function
+
+```javascript
+// return array function
+const ReturnFunction = (params: string): [string] => {
+	return [params];
+};
+
+const result = ReturnFunction('sdf');
+```
+
+- Generic Function
+
+```javascript
+// return  array generic function
+const ReturnFunction2 = <T>(params: T): T[] => {
+	return [params];
+};
+
+const result2 = ReturnFunction2 < string > 'sdf';
+```
+
+- Using Spread Operator
+- <T> for get Object Type otherwise you can not get
+  FunCall.age;
+  FunCall.location;
+
+```javascript
+const MySpreedFun = <T>(myData: T) => {
+	const abc = 'new ';
+	const newAdd = { ...myData, abc };
+	return newAdd;
+};
+
+const data = {
+	name: 'My Name',
+	age: 32,
+	location: 'what',
+};
+
+const FunCall = MySpreedFun(data);
+```
+
+## Class 6
+
+**Generic Constance**
+
+- Some property will fixed
+
+```javascript
+const newFunGenConstant = <T extends { name: string; age: number }>(
+	params: T
+) => {
+	return params;
+};
+
+const dataX = {
+	name: 'name',
+	age: 234,
+	loc: 'sdf',
+};
+const GenConstantFunction = newFunGenConstant(dataX);
+
+
+```
+
+## Class 7
+
+**KEY OF GENERIC**
+
+- Create New Type Using Key Of another Type
+
+```javascript
+type MyNEWobj = {
+	name: string;
+	location: string;
+	age: number;
+};
+
+type KeyOf = keyof MyNEWobj;
+const B: KeyOf = 'location';
+
+```
+
+- using function key of
+
+```javascript
+// using function
+const GenKeyOfFunction = <X, Y extends keyof X>(Obj: X, Key: Y) => {
+	Obj[Key];
+};
+
+const property = GenKeyOfFunction({ name: 'sdf', age: 24 }, 'age');
+
+```
+
+## Class 8
+
+**Async Function**
+5min
