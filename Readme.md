@@ -210,3 +210,17 @@ const NewValue: GenPreIn<{ name: 'sd', age: number }> = {
 	},
 };
 ```
+
+- Optional chining
+
+```javascript
+// optional chaining
+interface GenType<T, U = null> {
+	name: T;
+	age?: U;
+}
+const NewValeX: GenType<string, string> = {
+	name: 'sdf',
+	age: 'sdf',
+};
+```
